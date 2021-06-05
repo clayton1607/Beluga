@@ -1081,3 +1081,80 @@ body.mobile-nav-active #mobile-nav-toggle {
 #footer .credits a {
   color: #0c2e8a;
 }
+
+#table-id {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#table-id thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+#table-id th,
+#table-id td {
+    padding: 12px 15px;
+}
+#table-id tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+#table-id tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+#table-id tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+#table-id tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+#table-id tfoot tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.pagination {
+  margin: 0;
+}
+
+.pagination li:hover{
+    cursor: pointer;
+}
+
+.header_wrap {
+  padding:30px 0;
+}
+.num_rows {
+  width: 20%;
+  float:left;
+}
+.tb_search{
+  width: 20%;
+  float:right;
+}
+.pagination-container {
+  width: 70%;
+  float:left;
+}
+
+.rows_count {
+  width: 20%;
+  float:right;
+  text-align:right;
+  color: #999;
+}
+
+#maxRows {
+  padding: 0px;
+}
