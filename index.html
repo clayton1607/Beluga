@@ -10,12 +10,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'UA-156036602-1');
+  </script>
+  <script>
+    $(document).ready(function(){
+      $("#myModal").modal('show');
+    });
   </script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
@@ -27,7 +34,8 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,14 +47,22 @@
   <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body id="body">
-
+   <!--==========================
+    Leflet
+  ============================-->
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <img class="img-responsive" src="img/Leaflet.jpg" alt="" >
+        </div>
+    </div>
+</div>
   <!--==========================
     Top Bar
   ============================-->
@@ -90,7 +106,7 @@
               <li><a href="https://twitter.com/protonequity">Twitter</a></li>
               <li><a href="https://www.instagram.com/protonequity/">Instagram</a></li>
               <li><a href="https://www.facebook.com/Proton-Equity-423431288254342">Facebook</a></li>
-              <li><a href="https://api.whatsapp.com/send?phone=918551024869">Watsapp</a></li>
+              <li><a href="https://api.whatsapp.com/send?phone=918551024869">Whatsapp</a></li>
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
@@ -237,7 +253,7 @@
     <section id="portfolio" class="wow fadeInUp">
       <div class="container">
         <div class="section-header">
-          <h2>Our Portfolio (Overall Returns 37%)</h2>
+          <h2>Our Portfolio (Overall Returns 39.52%)</h2>
           <p>Our Research Based Stock Picks</p><br><br>
 
           <div class="num_rows">
@@ -314,7 +330,7 @@
               <tr><td>05-Apr-2021</td><td>NSE:TIMETECHNO</td><td>62</td><td>85.2</td><td>37.42%</td><td></td></tr>
               <tr><td>07-Apr-2021</td><td>NSE:FILATEX</td><td>70</td><td>93.65</td><td>33.79%</td><td></td></tr>
               <tr><td>07-Apr-2021</td><td>NSE:RAIN</td><td>151</td><td>178.35</td><td>18.11%</td><td></td></tr>
-              <tr><td>08-Apr-2021</td><td>NSE:IRCON</td><td>92</td><td>46</td><td>-50%</td><td></td></tr>
+              <tr><td>08-Apr-2021</td><td>NSE:IRCON</td><td>45</td><td>46</td><td>2.17%</td><td></td></tr>
               <tr><td>09-Apr-2021</td><td>NSE:JKCEMENT</td><td>3040</td><td>2846.2</td><td>-6.38%</td><td></td></tr>
               <tr><td>14-Apr-2021</td><td>NSE:MOREPENLAB</td><td>40.2</td><td>56.3</td><td>40.05%</td><td></td></tr>
               <tr><td>16-Apr-2021</td><td>NSE:ANDHRSUGAR</td><td>340</td><td>410.2</td><td>20.65%</td><td></td></tr>
@@ -331,12 +347,11 @@
               <tr><td>11-May-2021</td><td>NSE:RALLIS</td><td>314</td><td>311</td><td>-0.96%</td><td></td></tr>
               <tr><td>12-May-2021</td><td>nse:bse</td><td>725</td><td>920.2</td><td>26.92%</td><td></td></tr>
               <tr><td>17-May-2021</td><td>NSE:IDFC</td><td>53.97</td><td>57.5</td><td>6.54%</td><td></td></tr>
-              <tr><td>27-May-2021</td><td>NSE:ASTRAMICRO</td><td>140</td><td>131</td><td>-6.43%</td><td></td></tr>
               
                 <!-- and so on... -->
             </tbody>
             <tfoot>
-              <tr class="active-row"><td>Overall Returns</td><td></td><td></td><td></td><td>+37%</td></tr>
+              <tr class="active-row"><td>Overall Returns</td><td></td><td></td><td></td><td>+39.52%</td></tr>
             </tfoot>
             
         </table>
