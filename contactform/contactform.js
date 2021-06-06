@@ -91,12 +91,13 @@ jQuery(document).ready(function($) {
     if (ferror) return false;
     else var str = $(this).serialize();
     $.ajax({
-      type: "POST",
-      url: "contactform/contactform.php",
-      data: str,
+      url: 'https://script.google.com/macros/s/AKfycbwGfmHf5vO3CBqLI1UDJz3Fc7ZWzq0-RKZ3AUnagEpkhAptHou9VbKbTKR8ryPR5wK-tA/exec',
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject(),
       success: function(msg) {
-        // alert(msg);
-        if (msg == 'OK') {
+        //alert(msg);
+        if (msg.result == 'success') {
           $("#sendmessage").addClass("show");
           $("#errormessage").removeClass("show");
           $('.contactForm').find("input, textarea").val("");

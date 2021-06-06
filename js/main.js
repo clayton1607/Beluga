@@ -309,3 +309,40 @@ if(input_value !=''){
     $('#maxRows').trigger('change');
   }
 }
+
+$.fn.serializeObject = function()
+{
+   var o = {};
+   var a = this.serializeArray();
+   $.each(a, function() {
+       if (o[this.name]) {
+           if (!o[this.name].push) {
+               o[this.name] = [o[this.name]];
+           }
+           o[this.name].push(this.value || '');
+       } else {
+           o[this.name] = this.value || '';
+       }
+   });
+   return o;
+};
+var v = $("#postStatus").serializeObject();
+console.log(v);
+
+var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbwGfmHf5vO3CBqLI1UDJz3Fc7ZWzq0-RKZ3AUnagEpkhAptHou9VbKbTKR8ryPR5wK-tA/exec'
+
+// $('#submit-form').on('click', function(e) {
+//   e.preventDefault();
+//   var jqxhr = $.ajax({
+//     url: url,
+//     method: "GET",
+//     dataType: "json",
+//     data: $form.serializeObject()
+//   }).success: function(data)(
+//     $("#sendmessage").addClass("show");
+//     $("#errormessage").removeClass("show");
+//     $('.contactForm').find("input, textarea").val("");
+//     console.log("done");
+//   );
+// })
