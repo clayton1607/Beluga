@@ -27,6 +27,7 @@ a:hover, a:active, a:focus {
 p {
   padding: 0;
   margin: 0 0 30px 0;
+  font-size: 1.5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -595,6 +596,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .content ul li {
+  font-size: 1.5em;
   padding-bottom: 10px;
 }
 
@@ -849,7 +851,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Call To Action Section
 --------------------------------*/
 #call-to-action {
-  background: #081e5b;
+  background: #1a1a1a;
   background-size: cover;
   padding: 40px 0;
 }
