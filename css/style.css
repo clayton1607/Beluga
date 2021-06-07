@@ -1093,7 +1093,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 100%;
   border-collapse: collapse;
   margin: 25px 0;
-  font-size: 0.9em;
+  font-size: 1.5em;
   font-family: 'Barlow Semi Condensed', sans-serif;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
