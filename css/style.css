@@ -1186,3 +1186,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     width: 10%;
   }
 }
+
+.comapny-logo {
+  max-width: 63px;
+  max-height: 176px;
+}
