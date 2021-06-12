@@ -1185,6 +1185,15 @@ body.mobile-nav-active #mobile-nav-toggle {
     max-height: 40px;
     width: 10%;
   }
+  .collapsable{
+    display: none;
+  }
+
+  #myModal {
+    width: auto;
+    padding-top: 30%;
+  }
+
 }
 
 .comapny-logo {
