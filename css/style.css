@@ -1190,8 +1190,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #myModal {
-    width: auto;
+    width: 400px  ;
+    padding: 10%;
     padding-top: 30%;
+  }
+
+  #myModal-img{
+    width: 240px;
+    height: 50%;
+  }
+
+  .modal-content {
+    width: 240px;
   }
 
 }
