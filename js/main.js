@@ -347,3 +347,42 @@ var $form = $('form#test-form'),
 //   );
 // })
 
+const carousel = document.querySelector('.carousel');
+const images = document.querySelectorAll('.carousel img');
+const dots = document.querySelectorAll('.carousel-dots .dot');
+const leftArrow = document.querySelector('.arrow.left');
+const rightArrow = document.querySelector('.arrow.right');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  const translateXValue = -currentIndex * 100; // Move the carousel horizontally
+  carousel.style.transform = `translateX(${translateXValue}%)`;
+
+  // Update active dot
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentIndex);
+  });
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % images.length; // Loop to the first image after the last
+  updateCarousel();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to the last image before the first
+  updateCarousel();
+}
+
+// Event Listeners for Navigation
+rightArrow.addEventListener('click', nextSlide);
+leftArrow.addEventListener('click', prevSlide);
+
+// Dot Navigation
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    updateCarousel();
+  });
+});
