@@ -168,7 +168,6 @@ jQuery(document).ready(function( $ ) {
 });
 
 getPagination('#table-id');
-getPagination('#table-id');
 $('#maxRows').trigger('change');
 function getPagination (table){
 
@@ -346,43 +345,91 @@ var $form = $('form#test-form'),
 //     console.log("done");
 //   );
 // })
+/* ===========================================
+   CUSTOM IMAGE CAROUSEL
+   =========================================== */
 
-const carousel = document.querySelector('.carousel');
-const images = document.querySelectorAll('.carousel img');
-const dots = document.querySelectorAll('.carousel-dots .dot');
-const leftArrow = document.querySelector('.arrow.left');
-const rightArrow = document.querySelector('.arrow.right');
+   const carousel = document.querySelector(".carousel");
+const slides = document.querySelectorAll(".carousel img");
+const dots = document.querySelectorAll(".carousel-dots .dot");
+const leftArrow = document.querySelector(".arrow.left");
+const rightArrow = document.querySelector(".arrow.right");
 
-let currentIndex = 0;
+if (carousel && slides.length > 0) {
 
-function updateCarousel() {
-  const translateXValue = -currentIndex * 100; // Move the carousel horizontally
-  carousel.style.transform = `translateX(${translateXValue}%)`;
+    let currentIndex = 0;
+    let autoSlide;
 
-  // Update active dot
-  dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentIndex);
-  });
-}
+    function updateCarousel() {
 
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % images.length; // Loop to the first image after the last
-  updateCarousel();
-}
+        carousel.style.transform =
+            "translateX(-" + (currentIndex * 100) + "%)";
 
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to the last image before the first
-  updateCarousel();
-}
+        dots.forEach(function(dot, i){
+            dot.classList.toggle("active", i === currentIndex);
+        });
 
-// Event Listeners for Navigation
-rightArrow.addEventListener('click', nextSlide);
-leftArrow.addEventListener('click', prevSlide);
+    }
 
-// Dot Navigation
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    currentIndex = index;
+    function nextSlide(){
+
+        currentIndex++;
+
+        if(currentIndex >= slides.length){
+            currentIndex = 0;
+        }
+
+        updateCarousel();
+    }
+
+    function prevSlide(){
+
+        currentIndex--;
+
+        if(currentIndex < 0){
+            currentIndex = slides.length - 1;
+        }
+
+        updateCarousel();
+    }
+
+    function startAutoSlide(){
+
+        clearInterval(autoSlide);
+
+        autoSlide = setInterval(function(){
+
+            nextSlide();
+
+        },2000);      // every 2 seconds
+    }
+
+    rightArrow.addEventListener("click",function(){
+
+        nextSlide();
+        startAutoSlide();
+
+    });
+
+    leftArrow.addEventListener("click",function(){
+
+        prevSlide();
+        startAutoSlide();
+
+    });
+
+    dots.forEach(function(dot,index){
+
+        dot.addEventListener("click",function(){
+
+            currentIndex = index;
+            updateCarousel();
+            startAutoSlide();
+
+        });
+
+    });
+
     updateCarousel();
-  });
-});
+    startAutoSlide();
+}

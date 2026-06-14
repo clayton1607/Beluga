@@ -7,77 +7,84 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/* ===========================
+   Custom Image Carousel
+=========================== */
+
 .carousel-container {
   position: relative;
   width: 100%;
-  height: 400px; /* Adjust this as needed */
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  overflow: hidden; /* Hide any overflow */
-}
-
-.carousel img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* Ensure images are contained without distortion */
-  display: block; /* Prevent inline spacing issues */
-  margin: auto; /* Center the image inside the container */
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
 }
 
 .carousel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  transition: transform .6s ease;
 }
+
+.carousel img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
+
+/* Navigation buttons */
 
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: transparent; /* Transparent background */
-  color: black; /* Arrow color */
-  border: none; /* Remove any borders */
-  box-shadow: none; /* Prevent shadow effects */
-  padding: 0; /* Reset padding */
-  margin: 0; /* Reset margin */
-  font-size: 1.5rem; /* Arrow size */
-  cursor: pointer;
-  outline: none; /* Remove focus outline */
-  z-index: 10;
-}
-
-.arrow:hover {
-  color: blue; /* Change color on hover for better visibility */
-  background-color: rgba(0, 0, 0, 0.1); /* Optional hover effect */
-}
-
-.arrow.left {
-  left: 10px;
-}
-
-.arrow.right {
-  right: 10px;
-}
-
-.carousel-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 45px;
+  height: 45px;
+  border: none;
   border-radius: 50%;
+  background: rgba(0,0,0,.5);
+  color: white;
+  font-size: 28px;
   cursor: pointer;
+  z-index: 20;
+  transition: .3s;
 }
 
-.dot.active {
-  background-color: white;
+.arrow:hover{
+  background: rgba(0,0,0,.8);
+}
+
+.arrow.left{
+  left:15px;
+}
+
+.arrow.right{
+  right:15px;
+}
+
+/* Dots */
+
+.carousel-dots{
+  position:absolute;
+  left:50%;
+  bottom:15px;
+  transform:translateX(-50%);
+  display:flex;
+  gap:10px;
+  z-index:20;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#bbb;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.dot.active{
+  background:#97845c;
 }
 
 body {
@@ -1028,6 +1035,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 #contact .contact-info {
   margin-bottom: 20px;
   text-align: center;
+}
+#contact .contact-info address {
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 #contact .contact-info i {
